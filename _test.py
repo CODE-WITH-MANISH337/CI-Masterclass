@@ -21,7 +21,7 @@ def test_cube():
 
 def test_fifth():
     assert fifth_power(2)==32,"Test failed fifth_power of 2 should be 32"
-    assert fifth_power(3)==243,"Test failed fifth_power of 3 should be 243"
+    assert fifth_power(3)==243,"Tesst failed fifth_power of 3 should be 243"
 
 def test_invalid_input():
     with pytest.raises(TypeError):
