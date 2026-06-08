@@ -10,3 +10,4 @@ if value:
     st.write(f'The Square is {value**2}')
     st.write(f'The Cube is {value **3}')
     st.write(f'The Fifth is {value**5}')
+
