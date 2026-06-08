@@ -8,25 +8,23 @@ on:
     branches:
       - main
 
-
 jobs:
   test:
     runs-on: ubuntu-latest
-  steps:
-    - name: Checkout code
-      uses: actions/checkout@v2
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
 
-    - name: Set up python
-      uses: actions/setup-python@v2
-      with: 
-        python-version: "3.13"
+      - name: Set up python
+        uses: actions/setup-python@v2
+        with: 
+          python-version: "3.13"
 
+      - name: Install Dependencies
+        run: |
+          python -m pip install --upgrade pip  # Fixed: removed extra hyphen in "pip-install"
+          pip install pytest streamlit
 
-    - name: Install Dependencies
-      run: 
-        python -m pip -install --upgrade pip
-        pip install pytest streamlit
-
-    - name: Run Test
-      run:
-        pytest _test.py      
+      - name: Run Test
+        run:
+          pytest _test.py
